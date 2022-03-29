@@ -9,6 +9,7 @@
 
             if(mysqli_num_rows($result)>0){
                 $data = mysqli_fetch_assoc($result);
+                
                 $username = $data['ad_user_name'];
                 $password = $data['ad_pass'];
                 $userid = $data['ad_id'];
@@ -18,7 +19,7 @@
                 $_SESSION["password"] = $password;
                 $_SESSION["userid"] = $userid;
 
-                header("Location: http://localhost:3000/admin/dashboard/mainDashboard.php");
+                header("Location: ../dashboard/mainDashboard.php");
             }
             else{
                 echo "Your Crediantial Is Wrong";

@@ -5,7 +5,7 @@ $p_id = $_GET['p_id']; ?>
  
     <div class="main">
         <?php
-        $fetch_query = "SELECT * FROM post  INNER JOIN author ON post.p_author = author.a_id 
+        $fetch_query = "SELECT * FROM post  INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
         INNER JOIN catagory ON post.p_catagory = catagory.c_id WHERE p_id = $p_id";
         $db = new database();
         $result = $db->fetch_data($fetch_query);
@@ -21,13 +21,13 @@ $p_id = $_GET['p_id']; ?>
             <div class="post">
                 <div class="titlecatagory">
                     <h2><?php echo $row['p_title']; ?></h2>
-                    <p><a href=""><?php echo $row['c_name']; ?></a></p>
+                    <p><a href="singleCatagoryPost.php?catagory_id=<?php echo $row['p_catagory'];?>"><?php echo $row['c_name']; ?></a></p>
                 </div>
                 <div class="image">
                     <img src='admin/uploads/.<?php echo $row['p_image']; ?>'>
                 </div>
                 <div class="authordate">
-                    <p><a href=""><?php echo $row['a_name']; ?></a></p>
+                <p><a href="singleAuthorPost.php?author_id=<?php echo $row['p_author'];?>"> <?php echo $row['ad_name']; ?></a></p>
                     <p id="pdate"><?php echo $row['p_date']; ?></p>
                 </div>
                 <div class="descritption" id="des">

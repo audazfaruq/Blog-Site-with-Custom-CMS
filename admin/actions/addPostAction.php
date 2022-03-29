@@ -13,9 +13,9 @@ if(isset($_FILES['image'])){
         die();
     }
 }
-
+session_start();
+$author = $_SESSION['userid'];
 $title = $_POST['title'];
-$author = $_POST['author'];
 $catagory = $_POST['catagory'];
 $desc = $_POST['description'];
 $date = date("d M, Y");
@@ -24,7 +24,7 @@ $db = new database();
 $result = $db->insert_data($insert_query);
 
 if($result == true){
-    header("Location: http://localhost:3000/index.php");
+    header("Location: ../../index.php");
 }
 else{
     echo "error";

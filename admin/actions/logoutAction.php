@@ -4,7 +4,7 @@ session_unset();
 session_destroy();
 if($_SESSION['username']==null)
 {
-    header("Location: http://localhost:3000/admin/index.php");
+    header("Location: ../index.php");
 }
 else
 {

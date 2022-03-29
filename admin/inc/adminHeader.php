@@ -21,7 +21,7 @@
             <a href="">About</a>
             <a href="">Contact</a>
             <a href="">Profile</a>
-            <a href="">Posts</a>
+            <a href="../dashboard/allPost.php">Posts</a>
             <a href="../dashboard/addPost.php">Add Post</a>
             <a href="../actions/logoutAction.php">Log-Out</a>
         </div>

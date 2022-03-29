@@ -138,6 +138,132 @@
 /* MAIN STYLING */
 
 
+/* All Post Styling */
+
+.main {
+    background: white;
+}
+
+.main .heading {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    color: gray;
+}
+
+.main .posts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main .post {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: auto;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.main .post:hover {
+    box-shadow: 2px 5px 5px grey;
+}
+
+.main .post .titlecatagory h2 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.main .post .titlecatagory p {
+    font-size: 14px;
+    position: relative;
+    width: fit-content;
+    margin: 5px 0px 8px 0px;
+}
+
+.main .post .titlecatagory p a {
+    text-decoration: none;
+    color: black;
+}
+
+.main .post .titlecatagory p a:hover {
+    padding: 2px;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: grey;
+}
+
+.main .post img {
+    width: 290px;
+    border-radius: 0px 10px;
+    margin: 0px 0px 8px 0px;
+}
+
+.main .post .authordate p {
+    padding: 2px 0px;
+    font-weight: bold;
+}
+
+.main .post .authordate p a {
+    text-decoration: none;
+    color: black;
+}
+
+.main .post .authordate p a:hover {
+    color: grey;
+}
+
+.main .post .authordate #pdate {
+    font-size: 12px;
+}
+
+.main .post .descritption {
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.main .post #des {
+    all: initial;
+}
+
+.main .post .button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .post #edit button {
+    position: relative;
+    bottom: -5px;
+    padding: 2px;
+    border-radius: 5px 0px 5px 0px;
+    color: white;
+    background: rgb(32, 53, 32);
+}
+
+.main .post #edit button:hover {
+    box-shadow: 2px 5px 5px green;
+}
+
+.main .post #dlt button {
+    position: relative;
+    bottom: -5px;
+    padding: 2px;
+    border-radius: 0px 5px 0px 5px;
+    color: white;
+    background: rgb(46, 19, 19);
+}
+
+.main .post #dlt button:hover {
+    box-shadow: 2px 5px 5px red;
+}
+
+
 /* Admin Login */
 
 .container {
@@ -244,7 +370,8 @@
     padding: 10px 50px;
 }
 
-.main .form label {
+.main .form label,
+p {
     font-size: 20px;
     font-weight: bold;
 }
@@ -266,6 +393,18 @@ textarea {
 .main .form textarea {
     width: 90%;
     height: initial;
+}
+
+
+/* Update Post */
+
+#editimg {
+    margin: 5px 0px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
 }
 
 
