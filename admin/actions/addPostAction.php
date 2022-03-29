@@ -19,9 +19,9 @@ $author = $_POST['author'];
 $catagory = $_POST['catagory'];
 $desc = $_POST['description'];
 $date = date("d M, Y");
-$query = "INSERT INTO post (p_title,p_author,p_catagory,p_description,p_image,p_date) VALUES ('$title',$author,$catagory,'$desc','$file_name','$date')";
+$insert_query = "INSERT INTO post (p_title,p_author,p_catagory,p_description,p_image,p_date) VALUES ('$title',$author,$catagory,'$desc','$file_name','$date')";
 $db = new database();
-$result = $db->insert_data($query);
+$result = $db->insert_data($insert_query);
 
 if($result == true){
     header("Location: http://localhost:3000/index.php");

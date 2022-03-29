@@ -12,10 +12,10 @@ require "admin/db/database.php"; ?>
 
         <div class="posts">
             <?php
-                $query = "SELECT * FROM post INNER JOIN author ON post.p_author = author.a_id 
+                $fetch_query = "SELECT * FROM post INNER JOIN author ON post.p_author = author.a_id 
                 INNER JOIN catagory ON post.p_catagory = catagory.c_id";
                 $db = new database();
-                $result = $db->fetch_data($query);
+                $result = $db->fetch_data($fetch_query);
                 if(mysqli_num_rows($result)){
                     while ($row = mysqli_fetch_assoc($result)) {
             ?>      

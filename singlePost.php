@@ -5,10 +5,10 @@ $p_id = $_GET['p_id']; ?>
  
     <div class="main">
         <?php
-        $query = "SELECT * FROM post  INNER JOIN author ON post.p_author = author.a_id 
+        $fetch_query = "SELECT * FROM post  INNER JOIN author ON post.p_author = author.a_id 
         INNER JOIN catagory ON post.p_catagory = catagory.c_id WHERE p_id = $p_id";
         $db = new database();
-        $result = $db->fetch_data($query);
+        $result = $db->fetch_data($fetch_query);
         $row = mysqli_fetch_assoc($result);
         ?>
         <div class="heading">

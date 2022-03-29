@@ -1,6 +1,13 @@
-<?php 
+<?php
 include "../inc/adminHeader.php";
 require "../db/database.php";
+session_start();
+if(!isset($_SESSION ['username']))
+{
+    header("Location: http://localhost:3000/admin");
+}
+else
+{
 ?>
     <div class="main">
         <h1>Upload a Post</h1>
@@ -13,8 +20,8 @@ require "../db/database.php";
                     <option value=""selected disabled>Select Author</option>
                        <?php
                          $db = new database();
-                         $query = "SELECT * FROM author";
-                         $res = $db->fetch_data($query);
+                         $fetch_query = "SELECT * FROM author";
+                         $res = $db->fetch_data($fetch_query);
                          while ($author = mysqli_fetch_assoc($res)) {
                         ?>
                     <option value="<?php echo $author['a_id']; ?>"><?php echo $author['a_name']; ?></option>
@@ -25,8 +32,8 @@ require "../db/database.php";
                     <option value=""selected disabled>Select Catagory</option>
                        <?php
                          $db = new database();
-                         $query = "SELECT * FROM catagory";
-                         $res = $db->fetch_data($query);
+                         $fetch_query = "SELECT * FROM catagory";
+                         $res = $db->fetch_data($fetch_query);
                          while ($catagory = mysqli_fetch_assoc($res)) {
                         ?>
                     <option value="<?php echo $catagory['c_id']; ?>"><?php echo $catagory['c_name']; ?></option>
@@ -42,3 +49,6 @@ require "../db/database.php";
     </div>
 
 <?php include "../inc/adminFooter.php" ?>
+<?php
+}
+?>

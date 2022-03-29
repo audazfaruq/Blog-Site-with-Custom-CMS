@@ -97,9 +97,6 @@
 }
 
 
-/* MAIN STYLING */
-
-
 /* Side Menu */
 
 .menu {
@@ -138,7 +135,96 @@
 }
 
 
-/* Main Page */
+/* MAIN STYLING */
+
+
+/* Admin Login */
+
+.container {
+    color: white;
+    text-align: center;
+    background: #000;
+    height: 96%;
+    width: 96%;
+    margin: 2%;
+    padding: 0px 0px 50px 0px;
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.container .top h1 {
+    font-size: 25px;
+    padding: 50px 0px 10px 0px;
+    color: white;
+}
+
+.container .top img {
+    padding: 0px 0px 10px 0px;
+    height: 100px;
+}
+
+.container .form {
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 15%;
+    padding: 10px;
+}
+
+.container .form:hover {
+    box-shadow: 5PX 5PX 5PX white, -5PX -5PX 5PX white;
+}
+
+.container .form label {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0px 0px 0px;
+}
+
+.container .form input {
+    font-size: 18px;
+    width: 50%;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+.container .form button {
+    margin: 5px 0px 10px 0px;
+    width: 40%;
+    height: 30px;
+    color: black;
+    font-size: 15px;
+    background: white;
+    border-radius: 5px;
+}
+
+.container .form button:hover {
+    background: black;
+    color: white;
+    box-shadow: 2PX 2PX 5PX white;
+}
+
+.container .form .extra .forget {
+    color: grey;
+}
+
+.container .form .extra .forget a {
+    text-decoration: none;
+    color: grey;
+}
+
+.container .form .extra .forget a:hover {
+    color: white;
+}
+
+.container h1 {
+    padding: 20px 0px;
+    font-size: 20px;
+    color: white;
+}
+
+
+/* Add Post */
 
 .main {
     width: 50vw;
@@ -214,11 +300,11 @@ textarea {
 
 .footer .credit a {
     text-decoration: none;
-    color: grey;
+    color: white;
 }
 
 .footer .credit a:hover {
-    color: white;
+    color: black;
 }
 
 .footer .copyright {
@@ -235,5 +321,5 @@ textarea {
 }
 
 .footer .copyright a:hover {
-    color: grey;
+    color: black;
 }

@@ -11,9 +11,9 @@ class database
     {
         $this-> mysqli = new mysqli($this-> servername,$this-> username,$this-> pass,$this -> dbname);
     }
-    public function insert_data($query)
+    public function insert_data($insert_query)
     {
-       if($this->mysqli->query($query) === true)
+       if($this->mysqli->query($insert_query) === true)
        {
            return true;
        }
@@ -22,10 +22,32 @@ class database
        }
     }
 
-    public function fetch_data($query){
-        return $this->mysqli->query($query);
+    public function fetch_data($fetch_query){
+        return $this->mysqli->query($fetch_query);
     }
+
+    public function update_data($update_query)
+    {
+        if($this->mysqli->query($update_query) === true){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function delete_data($delete_query)
+    {
+        if($this->mysqli->query($delete_query) === true){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
 }
+
 
 
 ?>

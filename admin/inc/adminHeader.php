@@ -20,10 +20,10 @@
             <a href="">Home</a>
             <a href="">About</a>
             <a href="">Contact</a>
-            <a href="">Other</a>
-            <a href="">Other</a>
-            <a href="">Other</a>
-            <a href="">Log-Out</a>
+            <a href="">Profile</a>
+            <a href="">Posts</a>
+            <a href="../dashboard/addPost.php">Add Post</a>
+            <a href="../actions/logoutAction.php">Log-Out</a>
         </div>
     </div>
     
@@ -40,16 +40,16 @@
                 <a href="">Contact</a>
             </li>
             <li>
-                <a href="">Other1</a>
+                <a href="../dashboard/addPost.php"">Add Post</a>
             </li>
             <li>
-                <a href="">Other2</a>
+                <a href="">Add User</a>
             </li>
             <li>
-                <a href="">Sign-Up</a>
+                <a href="">View User</a>
             </li>
             <li>
-                <a href="admin.php">Admin-Login</a>
+                <a href="../actions/logoutAction.php">Log-Out</a>
             </li>
         </ul>
     </div>
