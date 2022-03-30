@@ -19,7 +19,7 @@
         <div class="topmenu">
             <a href="">Home</a>
             <a href="">About</a>
-            <a href="">Contact</a>
+            <a href="https://www.facebook.com/audazfaruq">Contact</a>
             <a href="">Sign-Up</a>
         </div>
     </div>
@@ -34,7 +34,7 @@
                 <a href="">About</a>
             </li>
             <li>
-                <a href="">Contact</a>
+                <a href="https://www.facebook.com/audazfaruq">Contact</a>
             </li>
             <li>
                 <a href="">Sign-Up</a>

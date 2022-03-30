@@ -19,7 +19,7 @@
         <div class="topmenu">
             <a href="">Home</a>
             <a href="">About</a>
-            <a href="">Contact</a>
+            <a href="https://www.facebook.com/audazfaruq">Contact</a>
             <a href="">Profile</a>
             <a href="../dashboard/allPost.php">Posts</a>
             <a href="../dashboard/addPost.php">Add Post</a>
@@ -37,7 +37,7 @@
                 <a href="">About</a>
             </li>
             <li>
-                <a href="">Contact</a>
+                <a href="https://www.facebook.com/audazfaruq">Contact</a>
             </li>
             <li>
                 <a href="../dashboard/addPost.php"">Add Post</a>

@@ -4,17 +4,20 @@ require "admin/db/database.php";
 $catagory_id = $_GET['catagory_id']; ?>
  
  <div class="main">
-        <div class="heading">
-            <h1>Latest Posts</h1>
+ <div class="heading">
+        <?php
+        $fetch_query = "SELECT * FROM post INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
+        INNER JOIN catagory ON post.p_catagory = catagory.c_id where p_catagory = $catagory_id";
+        $db = new database();
+        $result = $db->fetch_data($fetch_query);
+        $row1 = mysqli_fetch_assoc($result);
+        ?>
+            <h1>All Post of <?php echo $row1['c_name']; ?> Catagory.</h1><br>
             <hr>
         </div>
 
         <div class="posts">
             <?php
-                $fetch_query = "SELECT * FROM post INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
-                INNER JOIN catagory ON post.p_catagory = catagory.c_id where p_catagory = $catagory_id";
-                $db = new database();
-                $result = $db->fetch_data($fetch_query);
                 if(mysqli_num_rows($result)){
                     while ($row = mysqli_fetch_assoc($result)) {
             ?>      

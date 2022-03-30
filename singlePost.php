@@ -12,7 +12,7 @@ $p_id = $_GET['p_id']; ?>
         $row = mysqli_fetch_assoc($result);
         ?>
         <div class="heading">
-            <h1><?php echo $row['p_title']; ?></h1>
+            <h1><?php echo $row['p_title']; ?></h1><br>
             <hr>
         </div>
         

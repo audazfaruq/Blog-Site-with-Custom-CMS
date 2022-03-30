@@ -2,17 +2,24 @@
 include "../inc/adminHeader.php";
 require "../db/database.php";
 $post_id = $_GET['p_id'];
-?>
+session_start();
+if(!isset($_SESSION ['username']))
+{
+    header("Location: ../index.php");
+}
+else
+{
+    ?>
     <div class="main">
         <h1>Update Post</h1>
         <div class="form">
         <?php
                 $fetch_query = "SELECT * FROM post INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
                 INNER JOIN catagory ON post.p_catagory = catagory.c_id where p_id = $post_id";
-                $db = new database();
-                $result = $db->fetch_data($fetch_query);
-                if(mysqli_num_rows($result)){
-                    while ($row = mysqli_fetch_assoc($result)) {
+    $db = new database();
+    $result = $db->fetch_data($fetch_query);
+    if (mysqli_num_rows($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
             ?>   
             <form action="../actions/updatePostAction.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="p_id" value="<?php echo$row['p_id'] ?>">
@@ -23,12 +30,13 @@ $post_id = $_GET['p_id'];
                     <option value=""selected disabled>Select Catagory</option>
                        <?php
                          $db = new database();
-                         $fetch_query = "SELECT * FROM catagory";
-                         $res = $db->fetch_data($fetch_query);
-                         while ($catagory = mysqli_fetch_assoc($res)) {
-                        ?>
+            $fetch_query = "SELECT * FROM catagory";
+            $res = $db->fetch_data($fetch_query);
+            while ($catagory = mysqli_fetch_assoc($res)) {
+                ?>
                     <option value="<?php echo $catagory['c_id']; ?>"><?php echo $catagory['c_name']; ?></option>
-                        <?php  } ?>
+                        <?php
+            } ?>
                 </select><br>
                 <label for="">Description</label><br>
                 <textarea rows = "5" cols="50" name = "description" required ><?php echo$row['p_description']; ?></textarea><br>
@@ -38,8 +46,12 @@ $post_id = $_GET['p_id'];
                 <img id="editimg" src="../uploads/.<?php echo $row['p_image']; ?>"><br>
                 <input type="submit" value="Submit">
             </form>
-            <?php } } ?>
+            <?php
+        }
+    } ?>
         </div>
     </div>
 
 <?php include "../inc/adminFooter.php" ?>
+<?php
+} ?>

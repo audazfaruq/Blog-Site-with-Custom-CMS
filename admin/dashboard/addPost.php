@@ -1,6 +1,13 @@
-<?php 
+<?php
 include "../inc/adminHeader.php";
 require "../db/database.php";
+session_start();
+if(!isset($_SESSION ['username']))
+{
+    header("Location: ../index.php");
+}
+else
+{
 ?>
     <div class="main">
         <h1>Upload a Post</h1>
@@ -29,4 +36,7 @@ require "../db/database.php";
         </div>
     </div>
 
-<?php include "../inc/adminFooter.php" ?>
+    <?php include "../inc/adminFooter.php" ?>
+<?php
+}
+?>

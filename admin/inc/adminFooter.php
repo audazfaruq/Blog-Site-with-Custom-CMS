@@ -6,10 +6,10 @@
             </a>
         </div>
         <div class="credit">
-                <p>Developed by <a href="">AUDAZ FARUQ</a></p>
+                <p>Developed by <a href="https://www.audazfaruq.com">AUDAZ FARUQ</a></p>
         </div>
         <div class="copyright">
-            <p><a href="">Fanjum</a> Tech Inc @2022</p>
+            <p><a href="https://www.facebook.com/audazfaruq">Fanjum</a> Tech Inc @2022</p>
         </div>
     </div>
 </div>

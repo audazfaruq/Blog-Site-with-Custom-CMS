@@ -4,7 +4,7 @@ require "admin/db/database.php"; ?>
 
     <div class="main">
         <div class="heading">
-            <h1>Latest Posts</h1>
+            <h1>Latest Posts</h1><br>
             <hr>
         </div>
 

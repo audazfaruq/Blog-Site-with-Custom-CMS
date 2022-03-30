@@ -5,16 +5,19 @@ $author_id = $_GET['author_id']; ?>
  
  <div class="main">
         <div class="heading">
-            <h1>Latest Posts</h1>
+        <?php
+        $fetch_query = "SELECT * FROM post INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
+        INNER JOIN catagory ON post.p_catagory = catagory.c_id where p_author = $author_id";
+        $db = new database();
+        $result = $db->fetch_data($fetch_query);
+        $row1 = mysqli_fetch_assoc($result);
+        ?>
+            <h1>All Post of <?php echo $row1['ad_name']; ?>.</h1><br>
             <hr>
         </div>
 
         <div class="posts">
             <?php
-                $fetch_query = "SELECT * FROM post INNER JOIN myadmin ON post.p_author = myadmin.ad_id 
-                INNER JOIN catagory ON post.p_catagory = catagory.c_id where p_author = $author_id";
-                $db = new database();
-                $result = $db->fetch_data($fetch_query);
                 if(mysqli_num_rows($result)){
                     while ($row = mysqli_fetch_assoc($result)) {
             ?>      
