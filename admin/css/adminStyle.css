@@ -321,7 +321,7 @@
 .container {
     color: white;
     text-align: center;
-    background: #000;
+    background: white;
     height: 96%;
     width: 96%;
     margin: 2%;
@@ -333,7 +333,7 @@
 .container .top h1 {
     font-size: 25px;
     padding: 50px 0px 10px 0px;
-    color: white;
+    color: black;
 }
 
 .container .top img {
@@ -343,18 +343,18 @@
 
 .container .form {
     width: 70%;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 10px;
     margin: 0 15%;
     padding: 10px;
 }
 
 .container .form:hover {
-    box-shadow: 5PX 5PX 5PX white, -5PX -5PX 5PX white;
+    box-shadow: 5PX 5PX 5PX black, -5PX -5PX 5PX black;
 }
 
 .container .form label {
-    color: white;
+    color: black;
     font-size: 20px;
     margin: 10px 0px 0px 0px;
 }
@@ -370,16 +370,16 @@
     margin: 5px 0px 10px 0px;
     width: 40%;
     height: 30px;
-    color: black;
+    color: white;
     font-size: 15px;
-    background: white;
+    background: black;
     border-radius: 5px;
 }
 
 .container .form button:hover {
-    background: black;
-    color: white;
-    box-shadow: 2PX 2PX 5PX white;
+    background: white;
+    color: black;
+    box-shadow: 2PX 2PX 5PX black;
 }
 
 .container .form .extra .forget {
@@ -392,13 +392,13 @@
 }
 
 .container .form .extra .forget a:hover {
-    color: white;
+    color: black;
 }
 
 .container h1 {
     padding: 20px 0px;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 
