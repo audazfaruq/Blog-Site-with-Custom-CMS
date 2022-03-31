@@ -1,0 +1,432 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /* SCROLL BAR */
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    /* GRID STYLINMG */
+    
+    .header {
+        grid-area: h;
+    }
+    
+    .menu {
+        grid-area: m;
+    }
+    
+    .main {
+        grid-area: p;
+    }
+    
+    .footer {
+        grid-area: f;
+    }
+    
+    .full {
+        display: grid;
+        grid-template-areas: 'h h h h h h h h h h h h' 'm m p p p p p p p p p p' 'f f f f f f f f f f f f';
+    }
+    /* HEADER STYLING */
+    
+    .header {
+        background: #000;
+        display: flex;
+        height: 80px;
+        position: relative;
+    }
+    
+    .header:hover {
+        box-shadow: 0px 2px 5px gray;
+    }
+    
+    .header .logo {
+        flex: 2;
+    }
+    
+    .header .logo img {
+        height: 80px;
+        padding-left: 20px;
+    }
+    
+    .header .topmenu {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        text-align: end;
+        padding-top: 25px;
+    }
+    
+    .header .topmenu a {
+        text-decoration: none;
+        padding: 0px 5px;
+        font-size: 20px;
+        color: white;
+    }
+    
+    .header .topmenu a:last-child {
+        padding-right: 20px;
+    }
+    
+    .header .topmenu a:hover {
+        color: gray;
+    }
+    
+    .header .topmenu a:active {
+        color: green;
+    }
+    
+    @media only screen and (max-width: 760px) {
+        .header {
+            background: #000;
+            display: flex;
+            height: 60px;
+            position: relative;
+        }
+        .header:hover {
+            box-shadow: 0px 2px 5px gray;
+        }
+        .header .logo {
+            flex: 1;
+        }
+        .header .logo img {
+            height: 60px;
+            padding-left: 10px;
+        }
+        .header .topmenu {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            text-align: end;
+            padding-top: 20px;
+        }
+        .header .topmenu a {
+            text-decoration: none;
+            padding: 0px 5px;
+            font-size: 15px;
+            color: white;
+        }
+        .header .topmenu a:last-child {
+            padding-right: 10px;
+        }
+        .header .topmenu a:hover {
+            color: gray;
+        }
+        .header .topmenu a:active {
+            color: green;
+        }
+    }
+    /* MAIN STYLING */
+    /* Side Menu */
+    
+    .menu {
+        background: #F2F2F2;
+    }
+    
+    .menu p {
+        padding: 10px 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .menu ul {
+        list-style-type: square;
+        padding: 0px 5px 20px 90px;
+        margin-right: 10px;
+    }
+    
+    .menu ul li {
+        padding-top: 5px;
+    }
+    
+    .menu ul li a {
+        font-size: 17px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .menu ul li a:hover {
+        border: 1px solid black;
+        border-radius: 5px;
+        background: #000;
+        color: white;
+    }
+    
+    .menu ul li a::selection {
+        color: green;
+    }
+    
+    @media only screen and (max-width: 760px) {
+        .menu {
+            background: #F2F2F2;
+        }
+        .menu p {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .menu ul {
+            list-style-type: square;
+            padding: 0px 5px 20px 40px;
+            margin-right: 5px;
+        }
+        .menu ul li {
+            padding-top: 5px;
+        }
+        .menu ul li a {
+            font-size: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        .menu ul li a:hover {
+            border: 1px solid black;
+            border-radius: 5px;
+            background: #000;
+            color: white;
+        }
+        .menu ul li a::selection {
+            color: green;
+        }
+    }
+    /* Main Page */
+    
+    .main {
+        background: white
+    }
+    
+    .main .heading {
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        font-size: 20px;
+        color: gray;
+    }
+    
+    .main .posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .main .post {
+        position: relative;
+        border: 3px solid black;
+        border-radius: 10px;
+        height: auto;
+        width: 300px;
+        margin: 10px 10px;
+        padding: 20px;
+    }
+    
+    .main .post:hover {
+        box-shadow: 2px 5px 5px grey;
+    }
+    
+    .main .post .titlecatagory h2 {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    
+    .main .post .titlecatagory p {
+        font-size: 14px;
+        position: relative;
+        width: fit-content;
+        margin: 5px 0px 8px 0px;
+    }
+    
+    .main .post .titlecatagory p a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .main .post .titlecatagory p a:hover {
+        padding: 2px;
+        border: 1px solid red;
+        border-radius: 5px;
+        color: grey;
+    }
+    
+    .main .post img {
+        width: 290px;
+        border-radius: 0px 10px;
+        margin: 0px 0px 8px 0px;
+    }
+    
+    .main .post .authordate p {
+        padding: 2px 0px;
+        font-weight: bold;
+    }
+    
+    .main .post .authordate p a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .main .post .authordate p a:hover {
+        color: grey;
+    }
+    
+    .main .post .authordate #pdate {
+        font-size: 12px;
+    }
+    
+    .main .post .descritption {
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    
+    .main .post #des {
+        all: initial;
+    }
+    
+    .main .post #readmore button {
+        position: relative;
+        bottom: -5px;
+        padding: 2px;
+        border-radius: 5px 0px 5px 0px;
+        color: white;
+        background: #000;
+    }
+    
+    .main .post #readmore button:hover {
+        box-shadow: 2px 5px 5px gray;
+    }
+    /* FOOTER STYLING */
+    
+    .footer {
+        background: #000;
+        display: flex;
+        height: 60px;
+    }
+    
+    .footer:hover {
+        box-shadow: 0px -2px 5px gray;
+    }
+    
+    .footer .logo {
+        flex: 1;
+    }
+    
+    .footer .logo img {
+        height: 55px;
+        padding-left: 20px;
+    }
+    
+    .footer .credit {
+        flex: 1;
+        color: white;
+        text-align: end;
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+    
+    .footer .credit a {
+        text-decoration: none;
+        color: grey;
+    }
+    
+    .footer .credit a:hover {
+        color: white;
+    }
+    
+    .footer .copyright {
+        flex: 1;
+        color: white;
+        text-align: end;
+        padding-right: 20px;
+        padding-top: 15px;
+    }
+    
+    .footer .copyright a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .footer .copyright a:hover {
+        color: grey;
+    }
+    
+    @media only screen and (max-width: 760px) {
+        .footer {
+            background: black;
+            display: flex;
+            height: 50px;
+        }
+        .footer p {
+            font-size: 15px;
+        }
+        .footer:hover {
+            box-shadow: 0px -2px 5px gray;
+        }
+        .footer .logo {
+            flex: 1;
+        }
+        .footer .logo img {
+            height: 50px;
+            padding-left: 10px;
+        }
+        .footer .credit {
+            flex: 1;
+            color: white;
+            text-align: end;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+        .footer .credit a {
+            text-decoration: none;
+            color: gray;
+        }
+        .footer .credit a:hover {
+            color: white;
+        }
+        .footer .copyright {
+            flex: 1;
+            color: white;
+            text-align: end;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+        .footer .copyright a {
+            text-decoration: none;
+            color: gray;
+        }
+        .footer .copyright a:hover {
+            color: white;
+        }
+    }
+    
+    .blog {
+        height: 555px;
+        width: 50vw;
+        margin-left: 25vw;
+    }
+    
+    .blog h1 {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .blog .form {
+        border: 3px solid black;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 10px 50px;
+    }
